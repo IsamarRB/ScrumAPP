@@ -1,6 +1,6 @@
 package com.scrumapp.model;
 
-public class ERole {
+public enum ERole {
     ADMIN,
     USER,
     MANAGER
