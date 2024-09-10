@@ -18,6 +18,5 @@ public class User {
     String password;
     @Enumerated(EnumType.STRING)
     ERole role;
-
     }
-}
+
