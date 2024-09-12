@@ -25,28 +25,24 @@ public class ProjectController {
     public List<Project> getAllProject(){
         return projectService.getAllProject();
     }
-    @GetMapping
+
+    @GetMapping(path = "/project/{id}")
     public Optional<Project> getProjectById(@PathVariable int id){
         return projectService.getProjectById(id);
     }
 
-    @PutMapping(path = "/api/project/{id}")
+    @PutMapping (path = "/project/{id}")
     public Project updateProject(@PathVariable int id, @RequestBody Project project){
         return projectService.updateProject(id, project);
     }
 
-    @DeleteMapping(path = "/api/project/{id}")
-    public ResponseEntity<String> deleteProjectById(@PathVariable int id){
-        Optional<Project> project = projectService.getProjectById(id);
-        if (project.isPresent()){
-            projectService.deleteProjectById(id);
-            return new ResponseEntity<>("Project deleted successfully", HttpStatus.OK);
+    @DeleteMapping(path = "/project/{id}")
+    public String deleteProjectById(@PathVariable int id){
+        boolean ok = projectService.deleteProjectById(id);
+        if (ok){
+            return "Project with id" + id + "was deleted";
         } else{
-            return new ResponseEntity<>("Project with id"+ id + "was not found.", HttpStatus.NOT_FOUND);
+            return "Project with id"+ id + "not found.";
         }
-    }
-    @DeleteMapping
-    public void deleteAllProject(){
-        projectService.deleteAllProject();
     }
 }

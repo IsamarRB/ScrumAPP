@@ -30,11 +30,12 @@ public class ProjectService {
         return iProjectRepository.findById(id).orElse(null);
     }
 
-    public void deleteProjectById(int id) {
-        iProjectRepository.deleteById(id);
-    }
-
-    public  void  deleteAllProject() {
-        iProjectRepository.deleteAll();
+    public boolean deleteProjectById(int id) {
+        try{
+            iProjectRepository.deleteById(id);
+            return true;
+        } catch (Exception e){
+            return false;
+        }
     }
 }
