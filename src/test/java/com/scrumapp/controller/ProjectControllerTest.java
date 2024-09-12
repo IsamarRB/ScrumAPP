@@ -20,6 +20,7 @@ import static org.springframework.test.web.servlet.request.MockMvcRequestBuilder
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
+
 public class ProjectControllerTest {
     @Mock
     private ProjectService projectService;
@@ -40,7 +41,7 @@ public class ProjectControllerTest {
         project1.setName("Animal Shelter");
 
         project2 = new Project();
-        project2.setId(1);
+        project2.setId(2);
         project2.setName("Veterinary Clinic");
     }
 
@@ -63,34 +64,37 @@ public class ProjectControllerTest {
     void  getProjectById() throws Exception{
         when(projectService.getProjectById(2)).thenReturn(Optional.of(project2));
 
-        mockMvc.perform(get("/project/2")
+        mockMvc.perform(get("/api/project/2")
                         .contentType(MediaType.APPLICATION_JSON))
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$.id").value(2))
-                .andExpect(jsonPath("$.name").value("Veterinary CLinic"));
+                .andExpect(jsonPath("$.name").value("Veterinary Clinic"));
     }
+
     @Test
     void UpdateProject() throws Exception{
-        when(projectService.updateProject(2, project2));
-        ObjectMapper objectMapper = new ObjectMapper();
+        when(projectService.updateProject(2, project2)).thenReturn(project2);
 
+        ObjectMapper objectMapper = new ObjectMapper();
         String projectJson = objectMapper.writeValueAsString(project2);
 
-        mockMvc.perform(put("/project/2")
+        mockMvc.perform(put("/api/project/2")
                         .contentType(MediaType.APPLICATION_JSON)
                         .content(projectJson))
-                .andExpect(status().isOk());
+                .andExpect(status().isOk())
+                .andExpect(jsonPath("$.id").value(2))
+                .andExpect(jsonPath("$.name").value("Veterinary Clinic"));
+
     }
 
     @Test
     void DeleteProjectById() throws Exception{
         when(projectService.deleteProjectById(1)).thenReturn(true);
 
-        mockMvc.perform(delete("/project/1")
+        mockMvc.perform(delete("/api/project/1")
                         .contentType(MediaType.APPLICATION_JSON))
                 .andExpect(status().isOk())
-                .andExpect(jsonPath("$.id").value(1))
-                .andExpect(jsonPath("$.name").value("Animal Shelter"));
+                .andExpect(jsonPath("$").value("Project with id 1 was deleted"));
 
     }
 }

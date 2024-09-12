@@ -26,23 +26,23 @@ public class ProjectController {
         return projectService.getAllProject();
     }
 
-    @GetMapping(path = "/project/{id}")
+    @GetMapping(path = "/{id}")
     public Optional<Project> getProjectById(@PathVariable int id){
         return projectService.getProjectById(id);
     }
 
-    @PutMapping (path = "/project/{id}")
+    @PutMapping (path = "/{id}")
     public Project updateProject(@PathVariable int id, @RequestBody Project project){
         return projectService.updateProject(id, project);
     }
 
-    @DeleteMapping(path = "/project/{id}")
+    @DeleteMapping(path = "/{id}")
     public String deleteProjectById(@PathVariable int id){
         boolean ok = projectService.deleteProjectById(id);
         if (ok){
-            return "Project with id" + id + "was deleted";
+            return "Project with id " + id + " was deleted";
         } else{
-            return "Project with id"+ id + "not found.";
+            return "Project with id "+ id + " not found.";
         }
     }
 }
