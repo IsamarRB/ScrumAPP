@@ -15,6 +15,7 @@ import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 import java.util.Optional;
 
 import static org.mockito.ArgumentMatchers.any;
+import static org.mockito.ArgumentMatchers.eq;
 import static org.mockito.Mockito.when;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
@@ -72,11 +73,15 @@ public class ProjectControllerTest {
     }
 
     @Test
-    void UpdateProject() throws Exception{
-        when(projectService.updateProject(2, project2)).thenReturn(project2);
+    void UpdateProject() throws Exception {
+        Project updateProject = new Project();
+        updateProject.setId(2);
+        updateProject.setName("Veterinary Clinic");
+
+        when(projectService.updateProject(eq(2), any(Project.class))).thenReturn(updateProject);
 
         ObjectMapper objectMapper = new ObjectMapper();
-        String projectJson = objectMapper.writeValueAsString(project2);
+        String projectJson = objectMapper.writeValueAsString(updateProject);
 
         mockMvc.perform(put("/api/project/2")
                         .contentType(MediaType.APPLICATION_JSON)
@@ -84,8 +89,9 @@ public class ProjectControllerTest {
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$.id").value(2))
                 .andExpect(jsonPath("$.name").value("Veterinary Clinic"));
-
     }
+
+
 
     @Test
     void DeleteProjectById() throws Exception{
