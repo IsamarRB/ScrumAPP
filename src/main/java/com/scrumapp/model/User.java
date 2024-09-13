@@ -1,7 +1,6 @@
 package com.scrumapp.model;
 
 import jakarta.persistence.*;
-import java.util.HashSet;
 
 @Entity
 @Table(name = "user", uniqueConstraints = {@UniqueConstraint(columnNames = {"username"})})

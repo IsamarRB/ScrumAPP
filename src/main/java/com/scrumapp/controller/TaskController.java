@@ -26,7 +26,7 @@ public class TaskController {
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<Task> getTaskById(@PathVariable int id) {
+    public ResponseEntity<Task> getTaskById(@PathVariable Integer id) {
         Task task = taskService.getTaskById(id);
         if (task == null) {
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
@@ -41,13 +41,13 @@ public class TaskController {
     }
 
     @PutMapping("/{id}")
-    public ResponseEntity<Task> updateTask(@PathVariable int id, @RequestBody Task task) {
+    public ResponseEntity<Task> updateTask(@PathVariable Integer id, @RequestBody Task task) {
         Task updatedTask = taskService.updateTask(task);
         return new ResponseEntity<>(updatedTask, HttpStatus.OK);
     }
 
     @DeleteMapping("/{id}")
-    public ResponseEntity<Void> deleteTask(@PathVariable int id) {
+    public ResponseEntity<Void> deleteTask(@PathVariable Integer id) {
         taskService.deleteTask(id);
         return new ResponseEntity<>(HttpStatus.NO_CONTENT);
     }

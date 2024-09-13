@@ -2,6 +2,7 @@ package com.scrumapp.model;
 
 import jakarta.persistence.*;
 
+
 @Entity
 @Table(name = "Task")
 
@@ -9,7 +10,9 @@ public class Task {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+
+    @Column(name = "id")
+    private Integer id;
 
     @Column(name = "name")
     private String name;
@@ -20,11 +23,18 @@ public class Task {
     @Column(name = "status")
     private String status;
 
-    public int getId() {
+    public Task() {
+        this.id = id;
+        this.name = name;
+        this.description = description;
+        this.status = status;
+    }
+
+    public Integer getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
@@ -51,13 +61,4 @@ public class Task {
     public void setStatus(String status) {
         this.status = status;
     }
-
-    public Task() {
-        this.id = id;
-        this.name = name;
-        this.description = description;
-        this.status = status;
-    }
-
 }
-
