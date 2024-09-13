@@ -1,5 +1,6 @@
 package com.scrumapp.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.scrumapp.dto.request.AuthResponse;
 import jakarta.persistence.*;
 import org.springframework.boot.autoconfigure.elasticsearch.ElasticsearchConnectionDetails;
@@ -18,7 +19,7 @@ public class User implements org.springframework.security.core.userdetails.UserD
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    Integer id;
+    int id;
 
     @Basic
     @Column(nullable = false)
@@ -32,12 +33,18 @@ public class User implements org.springframework.security.core.userdetails.UserD
     ERole role;
 
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, orphanRemoval = true)
+    @JsonIgnore
     private Set<Project> projects = new HashSet<>();
 
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, orphanRemoval = true)
+    @JsonIgnore
     private Set<Task> tasks = new HashSet<>();
 
-    private User(Builder builder) {
+    public User() {
+
+    }
+
+    public User(Builder builder) {
         this.id = builder.id;
         this.username = builder.username;
         this.email = builder.email;
@@ -86,6 +93,7 @@ public class User implements org.springframework.security.core.userdetails.UserD
     }
 
     @Override
+    @JsonIgnore
     public Collection<? extends GrantedAuthority> getAuthorities() {
         return List.of(new SimpleGrantedAuthority((role.name())));
     }
@@ -145,5 +153,7 @@ public class User implements org.springframework.security.core.userdetails.UserD
         public User build() {
             return new User(this);
         }
+
         }
+
 }
