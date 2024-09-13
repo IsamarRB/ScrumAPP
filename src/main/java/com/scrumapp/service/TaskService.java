@@ -2,9 +2,11 @@ package com.scrumapp.service;
 
 import com.scrumapp.Repositories.ITaskRepository;
 import com.scrumapp.model.Task;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+@Service
 public class TaskService {
     private final ITaskRepository iTaskRepository;
 
@@ -16,8 +18,7 @@ public class TaskService {
         return (List<Task>) iTaskRepository.findAll();
     }
 
-    public Task getTaskById(Integer id) {
-        return iTaskRepository.findById(Integer.valueOf(id)).orElse(null);}
+    public Task getTaskById(Integer id) {return iTaskRepository.findById(Integer.valueOf(id)).orElse(null);}
 
     public Task createTask(Task task) {
         return iTaskRepository.save(task);
