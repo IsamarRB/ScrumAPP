@@ -19,7 +19,7 @@ public class TaskService {
         return (List<Task>) iTaskRepository.findAll();
     }
 
-    public Task getTaskById(Integer id) {return iTaskRepository.findById(Integer.valueOf(id)).orElse(null);}
+    public Task getTaskById(Integer id) {return iTaskRepository.findById((id)).orElse(null);}
 
     public Task createTask(Task task) {
         return iTaskRepository.save(task);
@@ -30,5 +30,5 @@ public class TaskService {
         return iTaskRepository.save(task);
     }
 
-    public void deleteTask(Integer id) {iTaskRepository.deleteById(String.valueOf(id));}
+    public void deleteTask(Integer id) {iTaskRepository.deleteById((id));}
 }
