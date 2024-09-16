@@ -27,7 +27,13 @@ public class ProjectService {
     }
 
     public Project updateProject(int id, Project project) {
-        return iProjectRepository.findById(id).orElse(null);
+        Project existingProject = iProjectRepository.findById(id).orElse(null);
+
+        if (existingProject != null) {
+            existingProject.setName(project.getName());
+            return iProjectRepository.save(existingProject);
+        }
+        return null;
     }
 
     public boolean deleteProjectById(int id) {
