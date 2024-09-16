@@ -111,7 +111,7 @@ public class TaskServiceTest {
         when(taskRepository.save(task1)).thenReturn(task1);
 
         // Ejecutar el servicio
-        Task updatedTask = taskService.updateTask(task1);
+        Task updatedTask = taskService.updateTask(task1, 1);
 
         // Verificar el comportamiento
         assertNotNull(updatedTask);
