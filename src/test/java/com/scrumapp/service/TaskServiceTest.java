@@ -2,108 +2,131 @@ package com.scrumapp.service;
 
 import com.scrumapp.Repositories.ITaskRepository;
 import com.scrumapp.model.Task;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
-import org.mockito.junit.jupiter.MockitoExtension;
+import org.mockito.MockitoAnnotations;
 
 import java.util.Arrays;
 import java.util.List;
 import java.util.Optional;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertNull;
-import static org.mockito.Mockito.verify;
-import static org.mockito.Mockito.when;
+import static org.junit.jupiter.api.Assertions.*;
+import static org.mockito.Mockito.*;
 
-@ExtendWith(MockitoExtension.class)
 
 public class TaskServiceTest {
     @Mock
-    private ITaskRepository iTaskRepository;
+    private ITaskRepository taskRepository;
 
     @InjectMocks
     private TaskService taskService;
 
-    @Test
-    void testGetAllTasks() {
-        // Given
-        List<Task> tasks = Arrays.asList(new Task(), new Task());
-        when(iTaskRepository.findAll()).thenReturn(tasks);
+    private Task task1;
+    private Task task2;
 
-        // When
-        List<Task> result = taskService.getAllTasks();
+    @BeforeEach
+    public void setup() {
+        MockitoAnnotations.openMocks(this);
 
-        // Then
-        assertEquals(tasks, result);
-        verify(iTaskRepository).findAll();
+        task1 = new Task();
+        task1.setId(1);
+        task1.setName("Task 1");
+        task1.setDescription("Description 1");
+
+        task2 = new Task();
+        task2.setId(2);
+        task2.setName("Task 2");
+        task2.setDescription("Description 2");
     }
 
     @Test
-    void testGetTaskById() {
-        // Given
-        Task task = new Task();
-        when(iTaskRepository.findById("1")).thenReturn(Optional.of(task));
+    public void testGetAllTasks() {
+        // Preparar el mock
+        when(taskRepository.findAll()).thenReturn(Arrays.asList(task1, task2));
 
-        // When
-        Task result = taskService.getTaskById(1);
+        // Ejecutar el servicio
+        List<Task> tasks = taskService.getAllTasks();
 
-        // Then
-        assertEquals(task, result);
-        verify(iTaskRepository).findById("1");
+        // Verificar el comportamiento
+        assertEquals(2, tasks.size());
+        assertEquals("Task 1", tasks.get(0).getName());
+        assertEquals("Task 2", tasks.get(1).getName());
+
+        // Verificar que se llamó al repositorio una vez
+        verify(taskRepository, times(1)).findAll();
     }
 
     @Test
-    void testGetTaskById_NotFound() {
-        // Given
-        when(iTaskRepository.findById("1")).thenReturn(Optional.empty());
+    public void testGetTaskById() {
+        // Preparar el mock
+        when(taskRepository.findById(1)).thenReturn(Optional.of(task1));
 
-        // When
-        Task result = taskService.getTaskById(1);
+        // Ejecutar el servicio
+        Task foundTask = taskService.getTaskById(1);
 
-        // Then
-        assertNull(result);
-        verify(iTaskRepository).findById("1");
+        // Verificar el comportamiento
+        assertNotNull(foundTask);
+        assertEquals("Task 1", foundTask.getName());
+
+        // Verificar que se llamó al repositorio una vez
+        verify(taskRepository, times(1)).findById(1);
     }
 
     @Test
-    void testCreateTask() {
-        // Given
-        Task task = new Task();
-        when(iTaskRepository.save(task)).thenReturn(task);
+    public void testGetTaskById_NotFound() {
+        // Preparar el mock
+        when(taskRepository.findById(1)).thenReturn(Optional.empty());
 
-        // When
-        Task result = taskService.createTask(task);
+        // Ejecutar el servicio
+        Task foundTask = taskService.getTaskById(1);
 
-        // Then
-        assertEquals(task, result);
-        verify(iTaskRepository).save(task);
+        // Verificar el comportamiento
+        assertNull(foundTask);
+
+        // Verificar que se llamó al repositorio una vez
+        verify(taskRepository, times(1)).findById(1);
     }
 
     @Test
-    void testUpdateTask() {
-        // Given
-        Task task = new Task();
-        when(iTaskRepository.save(task)).thenReturn(task);
+    public void testCreateTask() {
+        // Preparar el mock
+        when(taskRepository.save(task1)).thenReturn(task1);
 
-        // When
-        Task result = taskService.updateTask(task);
+        // Ejecutar el servicio
+        Task createdTask = taskService.createTask(task1);
 
-        // Then
-        assertEquals(task, result);
-        verify(iTaskRepository).save(task);
+        // Verificar el comportamiento
+        assertNotNull(createdTask);
+        assertEquals("Task 1", createdTask.getName());
+
+        // Verificar que se llamó al repositorio una vez
+        verify(taskRepository, times(1)).save(task1);
     }
 
     @Test
-    void testDeleteTask() {
-        // Given
-        int id = 1;
+    public void testUpdateTask() {
+        // Preparar el mock
+        when(taskRepository.save(task1)).thenReturn(task1);
 
-        // When
-        taskService.deleteTask(id);
+        // Ejecutar el servicio
+        Task updatedTask = taskService.updateTask(task1, 1);
 
-        // Then
-        verify(iTaskRepository).deleteById(String.valueOf(id));
+        // Verificar el comportamiento
+        assertNotNull(updatedTask);
+        assertEquals("Task 1", updatedTask.getName());
+
+        // Verificar que se llamó al repositorio una vez
+        verify(taskRepository, times(1)).save(task1);
+    }
+
+    @Test
+    public void testDeleteTask() {
+        // Ejecutar el servicio
+        taskService.deleteTask(1);
+
+        // Verificar que se llamó al repositorio una vez
+        verify(taskRepository, times(1)).deleteById(1);
     }
 }

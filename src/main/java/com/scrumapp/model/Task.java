@@ -2,6 +2,7 @@ package com.scrumapp.model;
 
 import jakarta.persistence.*;
 
+
 @Entity
 @Table(name = "Task")
 
@@ -60,4 +61,3 @@ public class Task {
     }
 
 }
-
