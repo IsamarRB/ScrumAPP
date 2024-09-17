@@ -30,22 +30,23 @@ public class WebSecurityConfig {
                         csrf.disable())
                 .authorizeHttpRequests(authRequest ->
                         authRequest
-                                .requestMatchers("/api/auth/**").permitAll()
-                                .requestMatchers("/api/test/all").permitAll()
-                                .requestMatchers("/api/test/user").hasAnyAuthority("ADMIN", "USER")
-                                .requestMatchers("/api/test/admin").hasAuthority("ADMIN")
-                                .requestMatchers("/api/v1/pet/**").hasAnyAuthority("ADMIN", "USER")
-                                .requestMatchers("/api/adoption/applications/**").hasAnyAuthority("ADMIN", "USER")
-                                .requestMatchers("/api/adoption/applications/delete/").hasAuthority("ADMIN")
-                                .requestMatchers("/api/adoption/applications/update/").hasAuthority("ADMIN")
-                                .requestMatchers("/api/adoption/applications/getAll").permitAll()
-                                .requestMatchers("/api/v1/pet/delete/").hasAuthority("ADMIN")
-                                .requestMatchers("/api/v1/pet/update/").hasAuthority("ADMIN")
-                                .requestMatchers("/api/v1/pet/getAll").permitAll()
-                                .requestMatchers("/api/v1/donations/**").hasAnyAuthority("ADMIN", "USER")
-                                .requestMatchers("/api/v1/donations/delete/").hasAuthority("ADMIN")
-                                .requestMatchers("/api/v1/donations/update/**").hasAuthority("ADMIN")
-                                .requestMatchers("/api/v1/donations/getAll", "/api/v1/post/getAll").permitAll()
+                                .requestMatchers("/api/auth/login").permitAll()//POST
+                                .requestMatchers("/api/auth/register").hasAnyAuthority("ADMIN")//POST
+                                .requestMatchers("/api/user/").hasAnyAuthority("ADMIN")//GETALL
+                                .requestMatchers("/api/user/{id}").hasAnyAuthority("ADMIN", "USER")//GETID
+                                .requestMatchers("/api/user/create").hasAnyAuthority("ADMIN")//CREATE
+                                .requestMatchers("/api/user/update/{id}").hasAnyAuthority("ADMIN")//PUT
+                                .requestMatchers("/api/user/delete/{id}").hasAnyAuthority("ADMIN")//DELETEID
+                                .requestMatchers("/api/project/").permitAll()//GETALL
+                                .requestMatchers("/api/project/{id}").permitAll()//GETID
+                                .requestMatchers("/api/project/create").hasAnyAuthority("ADMIN", "MANAGER")//POST
+                                .requestMatchers("/api/project/update/{id}").hasAnyAuthority("ADMIN", "MANAGER")//PUTID
+                                .requestMatchers("/api/project/delete/{id}").hasAnyAuthority("ADMIN", "MANAGER")//DELETEID
+                                .requestMatchers("/api/task/").hasAnyAuthority("ADMIN", "MANAGER")//GETALL
+                                .requestMatchers("/api/task/{id}").hasAuthority("USER")//GETID
+                                .requestMatchers("/api/task/create").hasAuthority("MANAGER")//POST
+                                .requestMatchers("/api/task/update/{id}").hasAuthority("USERS")//PUTID
+                                .requestMatchers("/api/task/delete/{id}").hasAuthority("MANAGER")//DELETEID
                                 .anyRequest().authenticated()
 
                 )
