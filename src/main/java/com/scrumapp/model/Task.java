@@ -1,5 +1,6 @@
 package com.scrumapp.model;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import jakarta.persistence.*;
 
 
@@ -20,6 +21,11 @@ public class Task {
 
     @Column(name = "status")
     private String status;
+
+    @ManyToOne
+    @JoinColumn(name = "id", nullable = false)
+    @JsonBackReference
+    private User user;
 
     public int getId() {
         return id;
