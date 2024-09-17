@@ -1,6 +1,6 @@
 package com.scrumapp.service;
 
-import com.scrumapp.Repositories.ITaskRepository;
+import com.scrumapp.repository.ITaskRepository;
 import com.scrumapp.model.Task;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;

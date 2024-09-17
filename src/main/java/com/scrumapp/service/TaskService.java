@@ -1,8 +1,7 @@
 package com.scrumapp.service;
 
-import com.scrumapp.Repositories.ITaskRepository;
+import com.scrumapp.repository.ITaskRepository;
 import com.scrumapp.model.Task;
-import jakarta.persistence.Id;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
