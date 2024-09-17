@@ -21,7 +21,9 @@ Scrum APP is a task management system designed to manage projects in a software 
 
 ##### 🚀 Installation Steps
 1. Clone the repository:
-//missing to post picture of how it's done.
+git clone https://github.com/IsamarRB/ScrumAPP.git
+2. Enter the project directory:
+cd ScrumAPP
 
 ## Project Objectives 🎯
 
