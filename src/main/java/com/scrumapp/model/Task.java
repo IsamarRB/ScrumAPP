@@ -23,7 +23,7 @@ public class Task {
     private String status;
 
     @ManyToOne
-    @JoinColumn(name = "id", nullable = false)
+    @JoinColumn(name = "user_id", nullable = false)
     @JsonBackReference
     private User user;
 
