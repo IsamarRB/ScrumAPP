@@ -2,12 +2,12 @@
 Scrum APP is a task management system designed to manage projects in a software development agency. The application allows you to assign and control tasks, manage users and ensure proper access control through roles with differentiated permissions.
 
 ## Table of Contents
-- Installation
-- Project Objectives
-- Project Context
-- Contributions
-- Authors
-- Licensing
+- [Installation](#Installation)
+- [Project Objectives](#Project-Objectives)
+- [Project Context](#Project-Context)
+- [Contributions](#Contributions)
+- [Authors](#Authors)
+- [Licensing](#Licensing)
 
 ## Installation 🔧
 
@@ -52,6 +52,6 @@ A software development agency that manages multiple web and mobile app developme
 
 ## Authors ✒️
 
-- José Manuel Polvillo Núñez - Scrum Master - [GitHub](https://github.com/JMPolvillo ‘GitHub’)
-- Sofía Ramírez Leiva - Product Owner - [GitHub](https://github.com/sofiaramirez157 ‘GitHub’)
-- Isamar Romero Bellorin - Developer - [GitHub](https://github.com/IsamarRB ‘GitHub’)
+- [José Manuel Polvillo Núñez](https://github.com/JMPolvillo) - Scrum Master
+- [Sofía Ramírez Leiva](https://github.com/sofiaramirez157) - Product Owner
+- [Isamar Romero Bellorin](https://github.com/IsamarRB) - Developer
