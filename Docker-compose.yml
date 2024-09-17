@@ -1,10 +1,10 @@
 services:
   mysql_service:
     image: mysql:8.0
-    container_name: mysql_animalshelter
+    container_name: mysql_scrumapp
     environment:
       MYSQL_ALLOW_EMPTY_PASSWORD: "yes"
-      MYSQL_DATABASE: db_animalshelter
+      MYSQL_DATABASE: db_scrumapp
     ports:
       - "3306:3306"
     volumes:
@@ -12,11 +12,11 @@ services:
 
   springboot_app:
     build: .
-    container_name: animalshelter
+    container_name: scrumapp
     ports:
       - "8080:8080"
     environment:
-      SPRING_DATASOURCE_URL: jdbc:mysql://mysql_service:3306/db_animalshelter
+      SPRING_DATASOURCE_URL: jdbc:mysql://mysql_service:3306/db_scrumapp
       SPRING_DATASOURCE_USERNAME: root
       SPRING_DATASOURCE_PASSWORD:
       SPRING_JPA_HIBERNATE_DDL_AUTO: update

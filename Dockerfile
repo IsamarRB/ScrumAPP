@@ -8,7 +8,7 @@ EXPOSE 8080
 WORKDIR /root
 
 #Copiar el código fuente (*.jar) dentro del directorio raiz que creamos para el contenedor
-COPY target/AnimalShelter-0.0.1-SNAPSHOT.jar /src/AnimalShelter-0.0.1-SNAPSHOT.jar
+COPY target/demo-0.0.1-SNAPSHOT.jar /src/app.jar
 
-#Levantar nuestra aplicacio cuando el contenedor inicie
-ENTRYPOINT ["java","-jar","/src/AnimalShelter-0.0.1-SNAPSHOT.jar"]
+#Levantar nuestra aplicación cuando el contenedor inicie
+ENTRYPOINT ["java","-jar","/src/app.jar"]
