@@ -50,6 +50,6 @@ A software development agency that manages multiple web and mobile app developme
 
 ## Authors ✒️
 
-José Manuel Polvillo Núñez - Scrum Master - [GitHub](https://github.com/JMPolvillo ‘GitHub’)
-Sofía Ramírez Leiva - Product Owner - [GitHub](https://github.com/sofiaramirez157 ‘GitHub’)
-Isamar Romero Bellorin - Developer - [GitHub](https://github.com/IsamarRB ‘GitHub’)
+- José Manuel Polvillo Núñez - Scrum Master - [GitHub](https://github.com/JMPolvillo ‘GitHub’)
+- Sofía Ramírez Leiva - Product Owner - [GitHub](https://github.com/sofiaramirez157 ‘GitHub’)
+- Isamar Romero Bellorin - Developer - [GitHub](https://github.com/IsamarRB ‘GitHub’)
