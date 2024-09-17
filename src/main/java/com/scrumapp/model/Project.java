@@ -10,14 +10,14 @@ public class Project {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-   @Column (name = "id")
+    @Column (name = "id")
     private int id;
 
     @Column(name = "name")
     private String name;
 
     @ManyToOne
-    @JoinColumn(name = "id", nullable = false)
+    @JoinColumn(name = "user_id", nullable = false)
     @JsonBackReference
     private User user;
 
