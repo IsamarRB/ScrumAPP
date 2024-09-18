@@ -1,6 +1,7 @@
 package com.scrumapp.service;
 
 import com.scrumapp.dto.request.AuthResponse;
+import com.scrumapp.dto.request.RegisterResponse;
 import com.scrumapp.dto.response.LoginRequest;
 import com.scrumapp.dto.response.RegisterRequest;
 import com.scrumapp.repository.UserRepository;
@@ -42,7 +43,7 @@ public class AuthService {
                 .build();
     }
 
-    public AuthResponse register(RegisterRequest register) {
+    public RegisterResponse register(RegisterRequest register) {
         User user = new User.Builder()
                 .username(register.getUsername())
                 .email(register.getEmail())
@@ -52,10 +53,6 @@ public class AuthService {
 
         userRepository.save(user);
 
-        return new AuthResponse
-                .Builder()
-                .token(jwtService.getTokenService(user))
-                .role(register.getRole())
-                .build();
+        return new RegisterResponse(register.getRole(), "User registered successfully");
     }
 }

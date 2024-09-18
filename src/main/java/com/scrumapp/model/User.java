@@ -20,7 +20,7 @@ public class User implements org.springframework.security.core.userdetails.UserD
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    int id;
+    Integer id;
 
     @Basic
     @Column(nullable = false)

@@ -1,6 +1,7 @@
 package com.scrumapp.controller;
 
 import com.scrumapp.dto.request.AuthResponse;
+import com.scrumapp.dto.request.RegisterResponse;
 import com.scrumapp.dto.response.LoginRequest;
 import com.scrumapp.dto.response.RegisterRequest;
 import com.scrumapp.service.AuthService;
@@ -24,11 +25,13 @@ public class AuthController {
 
     @PostMapping(value = "login")
     public ResponseEntity<AuthResponse> login(@RequestBody LoginRequest request) {
-        return ResponseEntity.ok(authService.login(request));
+        AuthResponse response = authService.login(request);
+        return ResponseEntity.ok(response);
     }
 
     @PostMapping(value = "register")
-    public ResponseEntity<AuthResponse> register(@RequestBody RegisterRequest request) {
-        return ResponseEntity.ok(authService.register(request));
+    public ResponseEntity<RegisterResponse> register(@RequestBody RegisterRequest request) {
+        RegisterResponse response = authService.register(request);
+        return ResponseEntity.ok(response);
     }
 }
