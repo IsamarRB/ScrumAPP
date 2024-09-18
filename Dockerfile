@@ -1,5 +1,5 @@
 #Imagen que descargara de Docker Hub con la version correcta de Java
-FROM openjdk:17-jdk-slim
+FROM openjdk:21-jdk-slim
 
 #Informar en que puerto se expone el contenedor (es a modo informativo)
 EXPOSE 8080

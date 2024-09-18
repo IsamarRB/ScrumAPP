@@ -14,12 +14,12 @@ import java.util.List;
 public class TaskController {
     private final TaskService taskService;
 
-    @Autowired
     public TaskController(TaskService taskService) {
         this.taskService = taskService;
     }
 
-    @GetMapping("")
+
+    @GetMapping("/")
     public ResponseEntity<List<Task>> getAllTasks() {
         List<Task> tasks = taskService.getAllTasks();
         return new ResponseEntity<>(tasks, HttpStatus.OK);
@@ -40,13 +40,13 @@ public class TaskController {
         return new ResponseEntity<>(createdTask, HttpStatus.CREATED);
     }
 
-    @PutMapping("update/{id}")
+    @PutMapping("/update/{id}")
     public ResponseEntity<Task> updateTask(@PathVariable Integer id, @RequestBody Task task) {
         Task updatedTask = taskService.updateTask(task, id);
         return new ResponseEntity<>(updatedTask, HttpStatus.OK);
     }
 
-    @DeleteMapping("delete/{id}")
+    @DeleteMapping("/delete/{id}")
     public ResponseEntity<Void> deleteTask(@PathVariable Integer id) {
         taskService.deleteTask(id);
         return new ResponseEntity<>(HttpStatus.NO_CONTENT);

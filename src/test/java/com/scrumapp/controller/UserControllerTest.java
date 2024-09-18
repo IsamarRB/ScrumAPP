@@ -80,7 +80,7 @@ class UserControllerTest {
         ObjectMapper objectMapper = new ObjectMapper();
         String userJson = objectMapper.writeValueAsString(user1);
 
-        mockMvc.perform(post("/api/user")
+        mockMvc.perform(post("/api/user/")
                         .contentType(MediaType.APPLICATION_JSON)
                         .content(userJson))
                 .andExpect(status().isOk())

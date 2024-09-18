@@ -14,14 +14,18 @@ import java.util.Optional;
 
 public class ProjectController {
 
-    private ProjectService projectService;
+    ProjectService projectService;
 
-    @PostMapping
+    public ProjectController(ProjectService projectService) {
+        this.projectService = projectService;
+    }
+
+    @PostMapping("/create")
     public Project createProject(@RequestBody Project project){
         return projectService.createProject(project);
     }
 
-    @GetMapping
+    @GetMapping("/")
     public List<Project> getAllProject(){
         return projectService.getAllProject();
     }
@@ -31,12 +35,12 @@ public class ProjectController {
         return projectService.getProjectById(id);
     }
 
-    @PutMapping (path = "/{id}")
+    @PutMapping (path = "/update/{id}")
     public Project updateProject(@PathVariable int id, @RequestBody Project project){
         return projectService.updateProject(id, project);
     }
 
-    @DeleteMapping(path = "/{id}")
+    @DeleteMapping(path = "/delete/{id}")
     public String deleteProjectById(@PathVariable int id){
         boolean ok = projectService.deleteProjectById(id);
         if (ok){
