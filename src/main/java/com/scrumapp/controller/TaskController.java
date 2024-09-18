@@ -11,8 +11,10 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/task")
+
 public class TaskController {
-    private final TaskService taskService;
+
+    TaskService taskService;
 
     public TaskController(TaskService taskService) {
         this.taskService = taskService;

@@ -34,11 +34,11 @@ public class User implements org.springframework.security.core.userdetails.UserD
     ERole role;
 
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, orphanRemoval = true)
-    @JsonIgnore
+    @JsonManagedReference
     private Set<Project> projects = new HashSet<>();
 
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, orphanRemoval = true)
-    @JsonIgnore
+    @JsonManagedReference
     private Set<Task> tasks = new HashSet<>();
 
     public User() {

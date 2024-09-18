@@ -43,10 +43,10 @@ public class WebSecurityConfig {
                                 .requestMatchers("/api/project/update/{id}").hasAnyAuthority("ADMIN", "MANAGER")//PUTID
                                 .requestMatchers("/api/project/delete/{id}").hasAnyAuthority("ADMIN", "MANAGER")//DELETEID
                                 .requestMatchers("/api/task/").hasAnyAuthority("ADMIN", "MANAGER")//GETALL
-                                .requestMatchers("/api/task/{id}").hasAuthority("USER")//GETID
-                                .requestMatchers("/api/task/create").hasAuthority("MANAGER")//POST
-                                .requestMatchers("/api/task/update/{id}").hasAuthority("USERS")//PUTID
-                                .requestMatchers("/api/task/delete/{id}").hasAuthority("MANAGER")//DELETEID
+                                .requestMatchers("/api/task/{id}").hasAnyAuthority("USER")//GETID
+                                .requestMatchers("/api/task/create").hasAnyAuthority("MANAGER")//POST
+                                .requestMatchers("/api/task/update/{id}").hasAnyAuthority("USER")//PUTID
+                                .requestMatchers("/api/task/delete/{id}").hasAnyAuthority("MANAGER")//DELETEID
                                 .anyRequest().authenticated()
 
                 )
