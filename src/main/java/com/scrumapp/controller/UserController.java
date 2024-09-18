@@ -16,13 +16,17 @@ public class UserController {
 
     UserService userService;
 
-    @PostMapping(path = "")
-    public User createDonation(@RequestBody User user) {
+    public UserController(UserService userService) {
+        this.userService = userService;
+    }
+
+    @PostMapping(path = "/")
+    public User createUser(@RequestBody User user) {
         return userService.createUser(user);
 
     }
 
-    @GetMapping(path = "")
+    @GetMapping(path = "/")
     public List<User> getAllUsers(){
         return userService.getAllUser();
     }
