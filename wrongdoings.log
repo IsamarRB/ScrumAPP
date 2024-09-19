@@ -1,0 +1,420 @@
+2024-09-19T00:26:02.083+02:00  INFO 22200 --- [ScrumApp] [main] com.scrumapp.ScrumAppApplication         : Starting ScrumAppApplication using Java 22.0.2 with PID 22200 (C:\Users\Usuario\Documents\Git\ScrumAPP\target\classes started by Usuario in C:\Users\Usuario\Documents\Git\ScrumAPP)
+2024-09-19T00:26:02.085+02:00  INFO 22200 --- [ScrumApp] [main] com.scrumapp.ScrumAppApplication         : No active profile set, falling back to 1 default profile: "default"
+2024-09-19T00:26:02.711+02:00  INFO 22200 --- [ScrumApp] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-09-19T00:26:02.769+02:00  INFO 22200 --- [ScrumApp] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 51 ms. Found 3 JPA repository interfaces.
+2024-09-19T00:26:03.302+02:00  INFO 22200 --- [ScrumApp] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-09-19T00:26:03.313+02:00  INFO 22200 --- [ScrumApp] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-09-19T00:26:03.314+02:00  INFO 22200 --- [ScrumApp] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.28]
+2024-09-19T00:26:03.370+02:00  INFO 22200 --- [ScrumApp] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-09-19T00:26:03.370+02:00  INFO 22200 --- [ScrumApp] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1248 ms
+2024-09-19T00:26:03.498+02:00  INFO 22200 --- [ScrumApp] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-09-19T00:26:03.564+02:00  INFO 22200 --- [ScrumApp] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-09-19T00:26:03.598+02:00  INFO 22200 --- [ScrumApp] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-09-19T00:26:03.891+02:00  INFO 22200 --- [ScrumApp] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-09-19T00:26:03.918+02:00  INFO 22200 --- [ScrumApp] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-09-19T00:26:04.065+02:00  INFO 22200 --- [ScrumApp] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5a48d186
+2024-09-19T00:26:04.066+02:00  INFO 22200 --- [ScrumApp] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-09-19T00:26:04.087+02:00  WARN 22200 --- [ScrumApp] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-09-19T00:26:04.088+02:00  WARN 22200 --- [ScrumApp] [main] org.hibernate.orm.deprecation            : HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2024-09-19T00:26:04.889+02:00  INFO 22200 --- [ScrumApp] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-09-19T00:26:04.985+02:00  INFO 22200 --- [ScrumApp] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-09-19T00:26:05.333+02:00  INFO 22200 --- [ScrumApp] [main] eAuthenticationProviderManagerConfigurer : Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
+2024-09-19T00:26:05.334+02:00  WARN 22200 --- [ScrumApp] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used for username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider.
+2024-09-19T00:26:05.376+02:00  WARN 22200 --- [ScrumApp] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-09-19T00:26:05.511+02:00 DEBUG 22200 --- [ScrumApp] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 19 mappings in 'requestMappingHandlerMapping'
+2024-09-19T00:26:05.594+02:00 DEBUG 22200 --- [ScrumApp] [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2024-09-19T00:26:05.701+02:00 DEBUG 22200 --- [ScrumApp] [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2024-09-19T00:26:05.729+02:00 DEBUG 22200 --- [ScrumApp] [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2024-09-19T00:26:05.821+02:00  INFO 22200 --- [ScrumApp] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-09-19T00:26:05.830+02:00  INFO 22200 --- [ScrumApp] [main] com.scrumapp.ScrumAppApplication         : Started ScrumAppApplication in 4.286 seconds (process running for 4.691)
+2024-09-19T00:26:14.603+02:00  INFO 22200 --- [ScrumApp] [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-09-19T00:26:14.603+02:00  INFO 22200 --- [ScrumApp] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-09-19T00:26:14.603+02:00 DEBUG 22200 --- [ScrumApp] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Detected StandardServletMultipartResolver
+2024-09-19T00:26:14.603+02:00 DEBUG 22200 --- [ScrumApp] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Detected AcceptHeaderLocaleResolver
+2024-09-19T00:26:14.603+02:00 DEBUG 22200 --- [ScrumApp] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Detected FixedThemeResolver
+2024-09-19T00:26:14.605+02:00 DEBUG 22200 --- [ScrumApp] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@5bed8b91
+2024-09-19T00:26:14.605+02:00 DEBUG 22200 --- [ScrumApp] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.support.SessionFlashMapManager@40f77135
+2024-09-19T00:26:14.605+02:00 DEBUG 22200 --- [ScrumApp] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2024-09-19T00:26:14.606+02:00  INFO 22200 --- [ScrumApp] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2024-09-19T00:31:12.812+02:00  INFO 22200 --- [ScrumApp] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-09-19T00:31:12.814+02:00  INFO 22200 --- [ScrumApp] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-09-19T00:31:12.821+02:00  INFO 22200 --- [ScrumApp] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-09-19T00:31:16.179+02:00  INFO 4912 --- [ScrumApp] [main] com.scrumapp.ScrumAppApplication         : Starting ScrumAppApplication using Java 22.0.2 with PID 4912 (C:\Users\Usuario\Documents\Git\ScrumAPP\target\classes started by Usuario in C:\Users\Usuario\Documents\Git\ScrumAPP)
+2024-09-19T00:31:16.181+02:00  INFO 4912 --- [ScrumApp] [main] com.scrumapp.ScrumAppApplication         : No active profile set, falling back to 1 default profile: "default"
+2024-09-19T00:31:16.840+02:00  INFO 4912 --- [ScrumApp] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-09-19T00:31:16.917+02:00  INFO 4912 --- [ScrumApp] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 69 ms. Found 3 JPA repository interfaces.
+2024-09-19T00:31:17.537+02:00  INFO 4912 --- [ScrumApp] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-09-19T00:31:17.551+02:00  INFO 4912 --- [ScrumApp] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-09-19T00:31:17.551+02:00  INFO 4912 --- [ScrumApp] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.28]
+2024-09-19T00:31:17.609+02:00  INFO 4912 --- [ScrumApp] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-09-19T00:31:17.609+02:00  INFO 4912 --- [ScrumApp] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1380 ms
+2024-09-19T00:31:17.744+02:00  INFO 4912 --- [ScrumApp] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-09-19T00:31:17.809+02:00  INFO 4912 --- [ScrumApp] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-09-19T00:31:17.848+02:00  INFO 4912 --- [ScrumApp] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-09-19T00:31:18.160+02:00  INFO 4912 --- [ScrumApp] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-09-19T00:31:18.191+02:00  INFO 4912 --- [ScrumApp] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-09-19T00:31:18.336+02:00  INFO 4912 --- [ScrumApp] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5a48d186
+2024-09-19T00:31:18.337+02:00  INFO 4912 --- [ScrumApp] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-09-19T00:31:18.362+02:00  WARN 4912 --- [ScrumApp] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-09-19T00:31:18.363+02:00  WARN 4912 --- [ScrumApp] [main] org.hibernate.orm.deprecation            : HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2024-09-19T00:31:19.177+02:00  INFO 4912 --- [ScrumApp] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-09-19T00:31:19.274+02:00  INFO 4912 --- [ScrumApp] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-09-19T00:31:19.632+02:00  INFO 4912 --- [ScrumApp] [main] eAuthenticationProviderManagerConfigurer : Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
+2024-09-19T00:31:19.633+02:00  WARN 4912 --- [ScrumApp] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used for username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider.
+2024-09-19T00:31:19.676+02:00  WARN 4912 --- [ScrumApp] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-09-19T00:31:19.807+02:00 DEBUG 4912 --- [ScrumApp] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 19 mappings in 'requestMappingHandlerMapping'
+2024-09-19T00:31:19.887+02:00 DEBUG 4912 --- [ScrumApp] [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2024-09-19T00:31:20.000+02:00 DEBUG 4912 --- [ScrumApp] [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2024-09-19T00:31:20.029+02:00 DEBUG 4912 --- [ScrumApp] [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2024-09-19T00:31:20.124+02:00  INFO 4912 --- [ScrumApp] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-09-19T00:31:20.133+02:00  INFO 4912 --- [ScrumApp] [main] com.scrumapp.ScrumAppApplication         : Started ScrumAppApplication in 4.494 seconds (process running for 4.888)
+2024-09-19T00:31:25.605+02:00  INFO 4912 --- [ScrumApp] [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-09-19T00:31:25.606+02:00  INFO 4912 --- [ScrumApp] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-09-19T00:31:25.606+02:00 DEBUG 4912 --- [ScrumApp] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Detected StandardServletMultipartResolver
+2024-09-19T00:31:25.606+02:00 DEBUG 4912 --- [ScrumApp] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Detected AcceptHeaderLocaleResolver
+2024-09-19T00:31:25.606+02:00 DEBUG 4912 --- [ScrumApp] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Detected FixedThemeResolver
+2024-09-19T00:31:25.607+02:00 DEBUG 4912 --- [ScrumApp] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@24ae2183
+2024-09-19T00:31:25.607+02:00 DEBUG 4912 --- [ScrumApp] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.support.SessionFlashMapManager@1f5a1ad4
+2024-09-19T00:31:25.607+02:00 DEBUG 4912 --- [ScrumApp] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2024-09-19T00:31:25.607+02:00  INFO 4912 --- [ScrumApp] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-09-19T00:31:25.844+02:00 DEBUG 4912 --- [ScrumApp] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : POST "/api/auth/login", parameters={}
+2024-09-19T00:31:25.846+02:00 DEBUG 4912 --- [ScrumApp] [http-nio-8080-exec-2] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.scrumapp.controller.AuthController#login(LoginRequest)
+2024-09-19T00:31:25.891+02:00 DEBUG 4912 --- [ScrumApp] [http-nio-8080-exec-2] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [com.scrumapp.dto.response.LoginRequest@296ab5a1]
+2024-09-19T00:31:26.066+02:00 DEBUG 4912 --- [ScrumApp] [http-nio-8080-exec-2] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2024-09-19T00:31:26.066+02:00 DEBUG 4912 --- [ScrumApp] [http-nio-8080-exec-2] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [com.scrumapp.dto.request.AuthResponse@61419479]
+2024-09-19T00:31:26.072+02:00 DEBUG 4912 --- [ScrumApp] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-09-19T00:32:37.078+02:00 DEBUG 4912 --- [ScrumApp] [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : GET "/api/user/", parameters={}
+2024-09-19T00:32:37.078+02:00 DEBUG 4912 --- [ScrumApp] [http-nio-8080-exec-5] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.scrumapp.controller.UserController#getAllUsers()
+2024-09-19T00:32:37.097+02:00 DEBUG 4912 --- [ScrumApp] [http-nio-8080-exec-5] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2024-09-19T00:32:37.097+02:00 DEBUG 4912 --- [ScrumApp] [http-nio-8080-exec-5] m.m.a.RequestResponseBodyMethodProcessor : Writing [[com.scrumapp.model.User@7cf0a5ab, com.scrumapp.model.User@4b8957ab, com.scrumapp.model.User@265c9d0 (truncated)...]
+2024-09-19T00:32:37.116+02:00 DEBUG 4912 --- [ScrumApp] [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-09-19T00:34:34.950+02:00  INFO 4912 --- [ScrumApp] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-09-19T00:34:34.951+02:00  INFO 4912 --- [ScrumApp] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-09-19T00:34:34.957+02:00  INFO 4912 --- [ScrumApp] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-09-19T00:34:38.514+02:00  INFO 43636 --- [ScrumApp] [main] com.scrumapp.ScrumAppApplication         : Starting ScrumAppApplication using Java 22.0.2 with PID 43636 (C:\Users\Usuario\Documents\Git\ScrumAPP\target\classes started by Usuario in C:\Users\Usuario\Documents\Git\ScrumAPP)
+2024-09-19T00:34:38.516+02:00  INFO 43636 --- [ScrumApp] [main] com.scrumapp.ScrumAppApplication         : No active profile set, falling back to 1 default profile: "default"
+2024-09-19T00:34:39.150+02:00  INFO 43636 --- [ScrumApp] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-09-19T00:34:39.214+02:00  INFO 43636 --- [ScrumApp] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 57 ms. Found 3 JPA repository interfaces.
+2024-09-19T00:34:39.742+02:00  INFO 43636 --- [ScrumApp] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-09-19T00:34:39.754+02:00  INFO 43636 --- [ScrumApp] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-09-19T00:34:39.754+02:00  INFO 43636 --- [ScrumApp] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.28]
+2024-09-19T00:34:39.809+02:00  INFO 43636 --- [ScrumApp] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-09-19T00:34:39.809+02:00  INFO 43636 --- [ScrumApp] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1244 ms
+2024-09-19T00:34:39.939+02:00  INFO 43636 --- [ScrumApp] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-09-19T00:34:39.998+02:00  INFO 43636 --- [ScrumApp] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-09-19T00:34:40.035+02:00  INFO 43636 --- [ScrumApp] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-09-19T00:34:40.323+02:00  INFO 43636 --- [ScrumApp] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-09-19T00:34:40.354+02:00  INFO 43636 --- [ScrumApp] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-09-19T00:34:40.489+02:00  INFO 43636 --- [ScrumApp] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6e73974
+2024-09-19T00:34:40.491+02:00  INFO 43636 --- [ScrumApp] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-09-19T00:34:40.517+02:00  WARN 43636 --- [ScrumApp] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-09-19T00:34:40.518+02:00  WARN 43636 --- [ScrumApp] [main] org.hibernate.orm.deprecation            : HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2024-09-19T00:34:41.308+02:00  INFO 43636 --- [ScrumApp] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-09-19T00:34:41.400+02:00  INFO 43636 --- [ScrumApp] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-09-19T00:34:41.755+02:00  INFO 43636 --- [ScrumApp] [main] eAuthenticationProviderManagerConfigurer : Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
+2024-09-19T00:34:41.755+02:00  WARN 43636 --- [ScrumApp] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used for username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider.
+2024-09-19T00:34:41.796+02:00  WARN 43636 --- [ScrumApp] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-09-19T00:34:41.927+02:00 DEBUG 43636 --- [ScrumApp] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 19 mappings in 'requestMappingHandlerMapping'
+2024-09-19T00:34:42.009+02:00 DEBUG 43636 --- [ScrumApp] [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2024-09-19T00:34:42.110+02:00 DEBUG 43636 --- [ScrumApp] [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2024-09-19T00:34:42.137+02:00 DEBUG 43636 --- [ScrumApp] [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2024-09-19T00:34:42.235+02:00  INFO 43636 --- [ScrumApp] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-09-19T00:34:42.243+02:00  INFO 43636 --- [ScrumApp] [main] com.scrumapp.ScrumAppApplication         : Started ScrumAppApplication in 4.275 seconds (process running for 4.635)
+2024-09-19T00:34:49.671+02:00  INFO 43636 --- [ScrumApp] [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-09-19T00:34:49.671+02:00  INFO 43636 --- [ScrumApp] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-09-19T00:34:49.671+02:00 DEBUG 43636 --- [ScrumApp] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Detected StandardServletMultipartResolver
+2024-09-19T00:34:49.672+02:00 DEBUG 43636 --- [ScrumApp] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Detected AcceptHeaderLocaleResolver
+2024-09-19T00:34:49.672+02:00 DEBUG 43636 --- [ScrumApp] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Detected FixedThemeResolver
+2024-09-19T00:34:49.673+02:00 DEBUG 43636 --- [ScrumApp] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@5bed8b91
+2024-09-19T00:34:49.673+02:00 DEBUG 43636 --- [ScrumApp] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.support.SessionFlashMapManager@25fc2b8f
+2024-09-19T00:34:49.674+02:00 DEBUG 43636 --- [ScrumApp] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2024-09-19T00:34:49.674+02:00  INFO 43636 --- [ScrumApp] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2024-09-19T00:37:51.113+02:00  INFO 43636 --- [ScrumApp] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-09-19T00:37:51.115+02:00  INFO 43636 --- [ScrumApp] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-09-19T00:37:51.121+02:00  INFO 43636 --- [ScrumApp] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-09-19T00:37:54.376+02:00  INFO 1708 --- [ScrumApp] [main] com.scrumapp.ScrumAppApplication         : Starting ScrumAppApplication using Java 22.0.2 with PID 1708 (C:\Users\Usuario\Documents\Git\ScrumAPP\target\classes started by Usuario in C:\Users\Usuario\Documents\Git\ScrumAPP)
+2024-09-19T00:37:54.379+02:00  INFO 1708 --- [ScrumApp] [main] com.scrumapp.ScrumAppApplication         : No active profile set, falling back to 1 default profile: "default"
+2024-09-19T00:37:55.044+02:00  INFO 1708 --- [ScrumApp] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-09-19T00:37:55.109+02:00  INFO 1708 --- [ScrumApp] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 56 ms. Found 3 JPA repository interfaces.
+2024-09-19T00:37:55.714+02:00  INFO 1708 --- [ScrumApp] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-09-19T00:37:55.726+02:00  INFO 1708 --- [ScrumApp] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-09-19T00:37:55.727+02:00  INFO 1708 --- [ScrumApp] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.28]
+2024-09-19T00:37:55.784+02:00  INFO 1708 --- [ScrumApp] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-09-19T00:37:55.784+02:00  INFO 1708 --- [ScrumApp] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1355 ms
+2024-09-19T00:37:55.911+02:00  INFO 1708 --- [ScrumApp] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-09-19T00:37:55.973+02:00  INFO 1708 --- [ScrumApp] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-09-19T00:37:56.014+02:00  INFO 1708 --- [ScrumApp] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-09-19T00:37:56.320+02:00  INFO 1708 --- [ScrumApp] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-09-19T00:37:56.351+02:00  INFO 1708 --- [ScrumApp] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-09-19T00:37:56.495+02:00  INFO 1708 --- [ScrumApp] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@79604abe
+2024-09-19T00:37:56.497+02:00  INFO 1708 --- [ScrumApp] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-09-19T00:37:56.521+02:00  WARN 1708 --- [ScrumApp] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-09-19T00:37:56.523+02:00  WARN 1708 --- [ScrumApp] [main] org.hibernate.orm.deprecation            : HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2024-09-19T00:37:57.340+02:00  INFO 1708 --- [ScrumApp] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-09-19T00:37:57.437+02:00  INFO 1708 --- [ScrumApp] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-09-19T00:37:57.814+02:00  INFO 1708 --- [ScrumApp] [main] eAuthenticationProviderManagerConfigurer : Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
+2024-09-19T00:37:57.815+02:00  WARN 1708 --- [ScrumApp] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used for username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider.
+2024-09-19T00:37:57.861+02:00  WARN 1708 --- [ScrumApp] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-09-19T00:37:58.003+02:00 DEBUG 1708 --- [ScrumApp] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 19 mappings in 'requestMappingHandlerMapping'
+2024-09-19T00:37:58.088+02:00 DEBUG 1708 --- [ScrumApp] [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2024-09-19T00:37:58.192+02:00 DEBUG 1708 --- [ScrumApp] [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2024-09-19T00:37:58.219+02:00 DEBUG 1708 --- [ScrumApp] [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2024-09-19T00:37:58.314+02:00  INFO 1708 --- [ScrumApp] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-09-19T00:37:58.321+02:00  INFO 1708 --- [ScrumApp] [main] com.scrumapp.ScrumAppApplication         : Started ScrumAppApplication in 4.521 seconds (process running for 4.922)
+2024-09-19T00:38:03.839+02:00  INFO 1708 --- [ScrumApp] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-09-19T00:38:03.839+02:00  INFO 1708 --- [ScrumApp] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-09-19T00:38:03.839+02:00 DEBUG 1708 --- [ScrumApp] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected StandardServletMultipartResolver
+2024-09-19T00:38:03.839+02:00 DEBUG 1708 --- [ScrumApp] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected AcceptHeaderLocaleResolver
+2024-09-19T00:38:03.839+02:00 DEBUG 1708 --- [ScrumApp] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected FixedThemeResolver
+2024-09-19T00:38:03.840+02:00 DEBUG 1708 --- [ScrumApp] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@6b7ebac1
+2024-09-19T00:38:03.840+02:00 DEBUG 1708 --- [ScrumApp] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.support.SessionFlashMapManager@4a0fc665
+2024-09-19T00:38:03.841+02:00 DEBUG 1708 --- [ScrumApp] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2024-09-19T00:38:03.841+02:00  INFO 1708 --- [ScrumApp] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2024-09-19T00:38:58.000+02:00 DEBUG 1708 --- [ScrumApp] [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : POST "/api/project/create", parameters={}
+2024-09-19T00:38:58.002+02:00 DEBUG 1708 --- [ScrumApp] [http-nio-8080-exec-3] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.scrumapp.controller.ProjectController#createProject(Project)
+2024-09-19T00:38:58.054+02:00 DEBUG 1708 --- [ScrumApp] [http-nio-8080-exec-3] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [com.scrumapp.model.Project@e38ede6]
+2024-09-19T00:38:58.104+02:00 DEBUG 1708 --- [ScrumApp] [http-nio-8080-exec-3] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2024-09-19T00:38:58.104+02:00 DEBUG 1708 --- [ScrumApp] [http-nio-8080-exec-3] m.m.a.RequestResponseBodyMethodProcessor : Writing [com.scrumapp.model.Project@e38ede6]
+2024-09-19T00:38:58.113+02:00 DEBUG 1708 --- [ScrumApp] [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-09-19T00:40:59.339+02:00  INFO 1708 --- [ScrumApp] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-09-19T00:40:59.341+02:00  INFO 1708 --- [ScrumApp] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-09-19T00:40:59.347+02:00  INFO 1708 --- [ScrumApp] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-09-19T00:41:02.496+02:00  INFO 25836 --- [ScrumApp] [main] com.scrumapp.ScrumAppApplication         : Starting ScrumAppApplication using Java 22.0.2 with PID 25836 (C:\Users\Usuario\Documents\Git\ScrumAPP\target\classes started by Usuario in C:\Users\Usuario\Documents\Git\ScrumAPP)
+2024-09-19T00:41:02.498+02:00  INFO 25836 --- [ScrumApp] [main] com.scrumapp.ScrumAppApplication         : No active profile set, falling back to 1 default profile: "default"
+2024-09-19T00:41:03.130+02:00  INFO 25836 --- [ScrumApp] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-09-19T00:41:03.192+02:00  INFO 25836 --- [ScrumApp] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 55 ms. Found 3 JPA repository interfaces.
+2024-09-19T00:41:03.752+02:00  INFO 25836 --- [ScrumApp] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-09-19T00:41:03.764+02:00  INFO 25836 --- [ScrumApp] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-09-19T00:41:03.764+02:00  INFO 25836 --- [ScrumApp] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.28]
+2024-09-19T00:41:03.820+02:00  INFO 25836 --- [ScrumApp] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-09-19T00:41:03.820+02:00  INFO 25836 --- [ScrumApp] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1276 ms
+2024-09-19T00:41:03.940+02:00  INFO 25836 --- [ScrumApp] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-09-19T00:41:03.996+02:00  INFO 25836 --- [ScrumApp] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-09-19T00:41:04.034+02:00  INFO 25836 --- [ScrumApp] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-09-19T00:41:04.337+02:00  INFO 25836 --- [ScrumApp] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-09-19T00:41:04.367+02:00  INFO 25836 --- [ScrumApp] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-09-19T00:41:04.514+02:00  INFO 25836 --- [ScrumApp] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5a48d186
+2024-09-19T00:41:04.516+02:00  INFO 25836 --- [ScrumApp] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-09-19T00:41:04.539+02:00  WARN 25836 --- [ScrumApp] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-09-19T00:41:04.541+02:00  WARN 25836 --- [ScrumApp] [main] org.hibernate.orm.deprecation            : HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2024-09-19T00:41:05.324+02:00  INFO 25836 --- [ScrumApp] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-09-19T00:41:05.416+02:00  INFO 25836 --- [ScrumApp] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-09-19T00:41:05.782+02:00  INFO 25836 --- [ScrumApp] [main] eAuthenticationProviderManagerConfigurer : Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
+2024-09-19T00:41:05.783+02:00  WARN 25836 --- [ScrumApp] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used for username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider.
+2024-09-19T00:41:05.824+02:00  WARN 25836 --- [ScrumApp] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-09-19T00:41:05.957+02:00 DEBUG 25836 --- [ScrumApp] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 19 mappings in 'requestMappingHandlerMapping'
+2024-09-19T00:41:06.040+02:00 DEBUG 25836 --- [ScrumApp] [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2024-09-19T00:41:06.141+02:00 DEBUG 25836 --- [ScrumApp] [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2024-09-19T00:41:06.168+02:00 DEBUG 25836 --- [ScrumApp] [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2024-09-19T00:41:06.262+02:00  INFO 25836 --- [ScrumApp] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-09-19T00:41:06.269+02:00  INFO 25836 --- [ScrumApp] [main] com.scrumapp.ScrumAppApplication         : Started ScrumAppApplication in 4.319 seconds (process running for 4.683)
+2024-09-19T00:41:19.979+02:00  INFO 25836 --- [ScrumApp] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-09-19T00:41:19.979+02:00  INFO 25836 --- [ScrumApp] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-09-19T00:41:19.979+02:00 DEBUG 25836 --- [ScrumApp] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected StandardServletMultipartResolver
+2024-09-19T00:41:19.980+02:00 DEBUG 25836 --- [ScrumApp] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected AcceptHeaderLocaleResolver
+2024-09-19T00:41:19.980+02:00 DEBUG 25836 --- [ScrumApp] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected FixedThemeResolver
+2024-09-19T00:41:19.981+02:00 DEBUG 25836 --- [ScrumApp] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@39dee5fd
+2024-09-19T00:41:19.981+02:00 DEBUG 25836 --- [ScrumApp] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.support.SessionFlashMapManager@4687fee7
+2024-09-19T00:41:19.982+02:00 DEBUG 25836 --- [ScrumApp] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2024-09-19T00:41:19.982+02:00  INFO 25836 --- [ScrumApp] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2024-09-19T00:41:20.237+02:00 DEBUG 25836 --- [ScrumApp] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : POST "/api/auth/login", parameters={}
+2024-09-19T00:41:20.238+02:00 DEBUG 25836 --- [ScrumApp] [http-nio-8080-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.scrumapp.controller.AuthController#login(LoginRequest)
+2024-09-19T00:41:20.288+02:00 DEBUG 25836 --- [ScrumApp] [http-nio-8080-exec-1] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [com.scrumapp.dto.response.LoginRequest@195040f2]
+2024-09-19T00:41:20.463+02:00 DEBUG 25836 --- [ScrumApp] [http-nio-8080-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2024-09-19T00:41:20.464+02:00 DEBUG 25836 --- [ScrumApp] [http-nio-8080-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [com.scrumapp.dto.request.AuthResponse@4acbfb1]
+2024-09-19T00:41:20.470+02:00 DEBUG 25836 --- [ScrumApp] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-09-19T00:43:48.523+02:00 DEBUG 25836 --- [ScrumApp] [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : GET "/api/user/9", parameters={}
+2024-09-19T00:43:48.524+02:00 DEBUG 25836 --- [ScrumApp] [http-nio-8080-exec-6] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.scrumapp.controller.UserController#getDonationId(int)
+2024-09-19T00:43:48.552+02:00 DEBUG 25836 --- [ScrumApp] [http-nio-8080-exec-6] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2024-09-19T00:43:48.552+02:00 DEBUG 25836 --- [ScrumApp] [http-nio-8080-exec-6] m.m.a.RequestResponseBodyMethodProcessor : Writing [Optional[com.scrumapp.model.User@238ae093]]
+2024-09-19T00:43:48.570+02:00 DEBUG 25836 --- [ScrumApp] [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-09-19T00:45:49.265+02:00  INFO 25836 --- [ScrumApp] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-09-19T00:45:49.267+02:00  INFO 25836 --- [ScrumApp] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-09-19T00:45:49.273+02:00  INFO 25836 --- [ScrumApp] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-09-19T00:45:52.555+02:00  INFO 33004 --- [ScrumApp] [main] com.scrumapp.ScrumAppApplication         : Starting ScrumAppApplication using Java 22.0.2 with PID 33004 (C:\Users\Usuario\Documents\Git\ScrumAPP\target\classes started by Usuario in C:\Users\Usuario\Documents\Git\ScrumAPP)
+2024-09-19T00:45:52.558+02:00  INFO 33004 --- [ScrumApp] [main] com.scrumapp.ScrumAppApplication         : No active profile set, falling back to 1 default profile: "default"
+2024-09-19T00:45:53.201+02:00  INFO 33004 --- [ScrumApp] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-09-19T00:45:53.266+02:00  INFO 33004 --- [ScrumApp] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 59 ms. Found 3 JPA repository interfaces.
+2024-09-19T00:45:53.821+02:00  INFO 33004 --- [ScrumApp] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-09-19T00:45:53.835+02:00  INFO 33004 --- [ScrumApp] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-09-19T00:45:53.835+02:00  INFO 33004 --- [ScrumApp] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.28]
+2024-09-19T00:45:53.892+02:00  INFO 33004 --- [ScrumApp] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-09-19T00:45:53.893+02:00  INFO 33004 --- [ScrumApp] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1292 ms
+2024-09-19T00:45:54.039+02:00  INFO 33004 --- [ScrumApp] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-09-19T00:45:54.099+02:00  INFO 33004 --- [ScrumApp] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-09-19T00:45:54.135+02:00  INFO 33004 --- [ScrumApp] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-09-19T00:45:54.422+02:00  INFO 33004 --- [ScrumApp] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-09-19T00:45:54.453+02:00  INFO 33004 --- [ScrumApp] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-09-19T00:45:54.599+02:00  INFO 33004 --- [ScrumApp] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@79604abe
+2024-09-19T00:45:54.603+02:00  INFO 33004 --- [ScrumApp] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-09-19T00:45:54.623+02:00  WARN 33004 --- [ScrumApp] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-09-19T00:45:54.624+02:00  WARN 33004 --- [ScrumApp] [main] org.hibernate.orm.deprecation            : HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2024-09-19T00:45:55.406+02:00  INFO 33004 --- [ScrumApp] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-09-19T00:45:55.533+02:00  INFO 33004 --- [ScrumApp] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-09-19T00:45:55.879+02:00  INFO 33004 --- [ScrumApp] [main] eAuthenticationProviderManagerConfigurer : Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
+2024-09-19T00:45:55.880+02:00  WARN 33004 --- [ScrumApp] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used for username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider.
+2024-09-19T00:45:55.922+02:00  WARN 33004 --- [ScrumApp] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-09-19T00:45:56.054+02:00 DEBUG 33004 --- [ScrumApp] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 19 mappings in 'requestMappingHandlerMapping'
+2024-09-19T00:45:56.129+02:00 DEBUG 33004 --- [ScrumApp] [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2024-09-19T00:45:56.221+02:00 DEBUG 33004 --- [ScrumApp] [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2024-09-19T00:45:56.247+02:00 DEBUG 33004 --- [ScrumApp] [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2024-09-19T00:45:56.340+02:00  INFO 33004 --- [ScrumApp] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-09-19T00:45:56.348+02:00  INFO 33004 --- [ScrumApp] [main] com.scrumapp.ScrumAppApplication         : Started ScrumAppApplication in 4.334 seconds (process running for 4.704)
+2024-09-19T00:46:04.018+02:00  INFO 33004 --- [ScrumApp] [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-09-19T00:46:04.018+02:00  INFO 33004 --- [ScrumApp] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-09-19T00:46:04.018+02:00 DEBUG 33004 --- [ScrumApp] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Detected StandardServletMultipartResolver
+2024-09-19T00:46:04.019+02:00 DEBUG 33004 --- [ScrumApp] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Detected AcceptHeaderLocaleResolver
+2024-09-19T00:46:04.019+02:00 DEBUG 33004 --- [ScrumApp] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Detected FixedThemeResolver
+2024-09-19T00:46:04.019+02:00 DEBUG 33004 --- [ScrumApp] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@49b6373f
+2024-09-19T00:46:04.020+02:00 DEBUG 33004 --- [ScrumApp] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.support.SessionFlashMapManager@267309f7
+2024-09-19T00:46:04.020+02:00 DEBUG 33004 --- [ScrumApp] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2024-09-19T00:46:04.020+02:00  INFO 33004 --- [ScrumApp] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2024-09-19T00:46:04.245+02:00 DEBUG 33004 --- [ScrumApp] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : GET "/api/user/9", parameters={}
+2024-09-19T00:46:04.247+02:00 DEBUG 33004 --- [ScrumApp] [http-nio-8080-exec-2] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.scrumapp.controller.UserController#getDonationId(int)
+2024-09-19T00:46:04.296+02:00 DEBUG 33004 --- [ScrumApp] [http-nio-8080-exec-2] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2024-09-19T00:46:04.297+02:00 DEBUG 33004 --- [ScrumApp] [http-nio-8080-exec-2] m.m.a.RequestResponseBodyMethodProcessor : Writing [Optional[com.scrumapp.model.User@25edc9c2]]
+2024-09-19T00:46:04.343+02:00 DEBUG 33004 --- [ScrumApp] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-09-19T00:46:59.710+02:00 DEBUG 33004 --- [ScrumApp] [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : GET "/api/user/14", parameters={}
+2024-09-19T00:46:59.711+02:00 DEBUG 33004 --- [ScrumApp] [http-nio-8080-exec-5] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.scrumapp.controller.UserController#getDonationId(int)
+2024-09-19T00:46:59.714+02:00 DEBUG 33004 --- [ScrumApp] [http-nio-8080-exec-5] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2024-09-19T00:46:59.715+02:00 DEBUG 33004 --- [ScrumApp] [http-nio-8080-exec-5] m.m.a.RequestResponseBodyMethodProcessor : Writing [Optional[com.scrumapp.model.User@18fa3472]]
+2024-09-19T00:46:59.717+02:00 DEBUG 33004 --- [ScrumApp] [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-09-19T00:47:04.085+02:00 DEBUG 33004 --- [ScrumApp] [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : GET "/api/user/13", parameters={}
+2024-09-19T00:47:04.085+02:00 DEBUG 33004 --- [ScrumApp] [http-nio-8080-exec-6] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.scrumapp.controller.UserController#getDonationId(int)
+2024-09-19T00:47:04.088+02:00 DEBUG 33004 --- [ScrumApp] [http-nio-8080-exec-6] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2024-09-19T00:47:04.088+02:00 DEBUG 33004 --- [ScrumApp] [http-nio-8080-exec-6] m.m.a.RequestResponseBodyMethodProcessor : Writing [Optional[com.scrumapp.model.User@dc96ef9]]
+2024-09-19T00:47:04.090+02:00 DEBUG 33004 --- [ScrumApp] [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-09-19T00:48:07.574+02:00 DEBUG 33004 --- [ScrumApp] [http-nio-8080-exec-9] o.s.web.servlet.DispatcherServlet        : POST "/api/task/create/", parameters={}
+2024-09-19T00:48:07.575+02:00 DEBUG 33004 --- [ScrumApp] [http-nio-8080-exec-9] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2024-09-19T00:48:07.577+02:00 DEBUG 33004 --- [ScrumApp] [http-nio-8080-exec-9] o.s.w.s.r.ResourceHttpRequestHandler     : Resource not found
+2024-09-19T00:48:07.579+02:00 DEBUG 33004 --- [ScrumApp] [http-nio-8080-exec-9] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource api/task/create.]
+2024-09-19T00:48:07.580+02:00 DEBUG 33004 --- [ScrumApp] [http-nio-8080-exec-9] o.s.web.servlet.DispatcherServlet        : Completed 404 NOT_FOUND
+2024-09-19T00:51:11.229+02:00  INFO 33004 --- [ScrumApp] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-09-19T00:51:11.231+02:00  INFO 33004 --- [ScrumApp] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-09-19T00:51:11.237+02:00  INFO 33004 --- [ScrumApp] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-09-19T00:51:14.804+02:00  INFO 39952 --- [ScrumApp] [main] com.scrumapp.ScrumAppApplication         : Starting ScrumAppApplication using Java 22.0.2 with PID 39952 (C:\Users\Usuario\Documents\Git\ScrumAPP\target\classes started by Usuario in C:\Users\Usuario\Documents\Git\ScrumAPP)
+2024-09-19T00:51:14.806+02:00  INFO 39952 --- [ScrumApp] [main] com.scrumapp.ScrumAppApplication         : No active profile set, falling back to 1 default profile: "default"
+2024-09-19T00:51:15.468+02:00  INFO 39952 --- [ScrumApp] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-09-19T00:51:15.529+02:00  INFO 39952 --- [ScrumApp] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 53 ms. Found 3 JPA repository interfaces.
+2024-09-19T00:51:16.075+02:00  INFO 39952 --- [ScrumApp] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-09-19T00:51:16.087+02:00  INFO 39952 --- [ScrumApp] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-09-19T00:51:16.088+02:00  INFO 39952 --- [ScrumApp] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.28]
+2024-09-19T00:51:16.144+02:00  INFO 39952 --- [ScrumApp] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-09-19T00:51:16.144+02:00  INFO 39952 --- [ScrumApp] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1291 ms
+2024-09-19T00:51:16.271+02:00  INFO 39952 --- [ScrumApp] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-09-19T00:51:16.327+02:00  INFO 39952 --- [ScrumApp] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-09-19T00:51:16.361+02:00  INFO 39952 --- [ScrumApp] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-09-19T00:51:16.661+02:00  INFO 39952 --- [ScrumApp] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-09-19T00:51:16.692+02:00  INFO 39952 --- [ScrumApp] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-09-19T00:51:16.828+02:00  INFO 39952 --- [ScrumApp] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@17c53dfb
+2024-09-19T00:51:16.830+02:00  INFO 39952 --- [ScrumApp] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-09-19T00:51:16.850+02:00  WARN 39952 --- [ScrumApp] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-09-19T00:51:16.851+02:00  WARN 39952 --- [ScrumApp] [main] org.hibernate.orm.deprecation            : HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2024-09-19T00:51:17.634+02:00  INFO 39952 --- [ScrumApp] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-09-19T00:51:17.729+02:00  INFO 39952 --- [ScrumApp] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-09-19T00:51:18.106+02:00  INFO 39952 --- [ScrumApp] [main] eAuthenticationProviderManagerConfigurer : Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
+2024-09-19T00:51:18.106+02:00  WARN 39952 --- [ScrumApp] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used for username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider.
+2024-09-19T00:51:18.151+02:00  WARN 39952 --- [ScrumApp] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-09-19T00:51:18.282+02:00 DEBUG 39952 --- [ScrumApp] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 19 mappings in 'requestMappingHandlerMapping'
+2024-09-19T00:51:18.357+02:00 DEBUG 39952 --- [ScrumApp] [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2024-09-19T00:51:18.456+02:00 DEBUG 39952 --- [ScrumApp] [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2024-09-19T00:51:18.489+02:00 DEBUG 39952 --- [ScrumApp] [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2024-09-19T00:51:18.589+02:00  INFO 39952 --- [ScrumApp] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-09-19T00:51:18.597+02:00  INFO 39952 --- [ScrumApp] [main] com.scrumapp.ScrumAppApplication         : Started ScrumAppApplication in 4.334 seconds (process running for 4.709)
+2024-09-19T00:51:27.615+02:00  INFO 39952 --- [ScrumApp] [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-09-19T00:51:27.615+02:00  INFO 39952 --- [ScrumApp] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-09-19T00:51:27.615+02:00 DEBUG 39952 --- [ScrumApp] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Detected StandardServletMultipartResolver
+2024-09-19T00:51:27.615+02:00 DEBUG 39952 --- [ScrumApp] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Detected AcceptHeaderLocaleResolver
+2024-09-19T00:51:27.615+02:00 DEBUG 39952 --- [ScrumApp] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Detected FixedThemeResolver
+2024-09-19T00:51:27.616+02:00 DEBUG 39952 --- [ScrumApp] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@1b897ffb
+2024-09-19T00:51:27.617+02:00 DEBUG 39952 --- [ScrumApp] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.support.SessionFlashMapManager@4687fee7
+2024-09-19T00:51:27.617+02:00 DEBUG 39952 --- [ScrumApp] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2024-09-19T00:51:27.617+02:00  INFO 39952 --- [ScrumApp] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2024-09-19T00:55:29.101+02:00  INFO 39952 --- [ScrumApp] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-09-19T00:55:29.103+02:00  INFO 39952 --- [ScrumApp] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-09-19T00:55:29.109+02:00  INFO 39952 --- [ScrumApp] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-09-19T00:55:32.305+02:00  INFO 21920 --- [ScrumApp] [main] com.scrumapp.ScrumAppApplication         : Starting ScrumAppApplication using Java 22.0.2 with PID 21920 (C:\Users\Usuario\Documents\Git\ScrumAPP\target\classes started by Usuario in C:\Users\Usuario\Documents\Git\ScrumAPP)
+2024-09-19T00:55:32.307+02:00  INFO 21920 --- [ScrumApp] [main] com.scrumapp.ScrumAppApplication         : No active profile set, falling back to 1 default profile: "default"
+2024-09-19T00:55:32.964+02:00  INFO 21920 --- [ScrumApp] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-09-19T00:55:33.032+02:00  INFO 21920 --- [ScrumApp] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 61 ms. Found 3 JPA repository interfaces.
+2024-09-19T00:55:33.603+02:00  INFO 21920 --- [ScrumApp] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-09-19T00:55:33.619+02:00  INFO 21920 --- [ScrumApp] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-09-19T00:55:33.619+02:00  INFO 21920 --- [ScrumApp] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.28]
+2024-09-19T00:55:33.682+02:00  INFO 21920 --- [ScrumApp] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-09-19T00:55:33.683+02:00  INFO 21920 --- [ScrumApp] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1329 ms
+2024-09-19T00:55:33.820+02:00  INFO 21920 --- [ScrumApp] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-09-19T00:55:33.874+02:00  INFO 21920 --- [ScrumApp] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-09-19T00:55:33.913+02:00  INFO 21920 --- [ScrumApp] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-09-19T00:55:34.211+02:00  INFO 21920 --- [ScrumApp] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-09-19T00:55:34.239+02:00  INFO 21920 --- [ScrumApp] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-09-19T00:55:34.381+02:00  INFO 21920 --- [ScrumApp] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@49c83262
+2024-09-19T00:55:34.383+02:00  INFO 21920 --- [ScrumApp] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-09-19T00:55:34.405+02:00  WARN 21920 --- [ScrumApp] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-09-19T00:55:34.407+02:00  WARN 21920 --- [ScrumApp] [main] org.hibernate.orm.deprecation            : HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2024-09-19T00:55:35.205+02:00  INFO 21920 --- [ScrumApp] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-09-19T00:55:35.307+02:00  INFO 21920 --- [ScrumApp] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-09-19T00:55:35.673+02:00  INFO 21920 --- [ScrumApp] [main] eAuthenticationProviderManagerConfigurer : Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
+2024-09-19T00:55:35.674+02:00  WARN 21920 --- [ScrumApp] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used for username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider.
+2024-09-19T00:55:35.716+02:00  WARN 21920 --- [ScrumApp] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-09-19T00:55:35.838+02:00 DEBUG 21920 --- [ScrumApp] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 19 mappings in 'requestMappingHandlerMapping'
+2024-09-19T00:55:35.907+02:00 DEBUG 21920 --- [ScrumApp] [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2024-09-19T00:55:36.015+02:00 DEBUG 21920 --- [ScrumApp] [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2024-09-19T00:55:36.043+02:00 DEBUG 21920 --- [ScrumApp] [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2024-09-19T00:55:36.141+02:00  INFO 21920 --- [ScrumApp] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-09-19T00:55:36.150+02:00  INFO 21920 --- [ScrumApp] [main] com.scrumapp.ScrumAppApplication         : Started ScrumAppApplication in 4.39 seconds (process running for 4.766)
+2024-09-19T00:55:44.786+02:00  INFO 21920 --- [ScrumApp] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-09-19T00:55:44.787+02:00  INFO 21920 --- [ScrumApp] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-09-19T00:55:44.787+02:00 DEBUG 21920 --- [ScrumApp] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected StandardServletMultipartResolver
+2024-09-19T00:55:44.787+02:00 DEBUG 21920 --- [ScrumApp] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected AcceptHeaderLocaleResolver
+2024-09-19T00:55:44.787+02:00 DEBUG 21920 --- [ScrumApp] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected FixedThemeResolver
+2024-09-19T00:55:44.788+02:00 DEBUG 21920 --- [ScrumApp] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@4b6fc231
+2024-09-19T00:55:44.788+02:00 DEBUG 21920 --- [ScrumApp] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.support.SessionFlashMapManager@22e650e
+2024-09-19T00:55:44.788+02:00 DEBUG 21920 --- [ScrumApp] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2024-09-19T00:55:44.788+02:00  INFO 21920 --- [ScrumApp] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-09-19T01:02:11.687+02:00  INFO 21920 --- [ScrumApp] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-09-19T01:02:11.689+02:00  INFO 21920 --- [ScrumApp] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-09-19T01:02:11.696+02:00  INFO 21920 --- [ScrumApp] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-09-19T01:02:14.856+02:00  INFO 29044 --- [ScrumApp] [main] com.scrumapp.ScrumAppApplication         : Starting ScrumAppApplication using Java 22.0.2 with PID 29044 (C:\Users\Usuario\Documents\Git\ScrumAPP\target\classes started by Usuario in C:\Users\Usuario\Documents\Git\ScrumAPP)
+2024-09-19T01:02:14.859+02:00  INFO 29044 --- [ScrumApp] [main] com.scrumapp.ScrumAppApplication         : No active profile set, falling back to 1 default profile: "default"
+2024-09-19T01:02:15.537+02:00  INFO 29044 --- [ScrumApp] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-09-19T01:02:15.608+02:00  INFO 29044 --- [ScrumApp] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 62 ms. Found 3 JPA repository interfaces.
+2024-09-19T01:02:16.198+02:00  INFO 29044 --- [ScrumApp] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-09-19T01:02:16.211+02:00  INFO 29044 --- [ScrumApp] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-09-19T01:02:16.211+02:00  INFO 29044 --- [ScrumApp] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.28]
+2024-09-19T01:02:16.269+02:00  INFO 29044 --- [ScrumApp] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-09-19T01:02:16.269+02:00  INFO 29044 --- [ScrumApp] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1365 ms
+2024-09-19T01:02:16.390+02:00  INFO 29044 --- [ScrumApp] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-09-19T01:02:16.450+02:00  INFO 29044 --- [ScrumApp] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-09-19T01:02:16.493+02:00  INFO 29044 --- [ScrumApp] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-09-19T01:02:16.791+02:00  INFO 29044 --- [ScrumApp] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-09-19T01:02:16.822+02:00  INFO 29044 --- [ScrumApp] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-09-19T01:02:16.961+02:00  INFO 29044 --- [ScrumApp] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5c839677
+2024-09-19T01:02:16.964+02:00  INFO 29044 --- [ScrumApp] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-09-19T01:02:16.983+02:00  WARN 29044 --- [ScrumApp] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-09-19T01:02:16.984+02:00  WARN 29044 --- [ScrumApp] [main] org.hibernate.orm.deprecation            : HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2024-09-19T01:02:17.754+02:00  INFO 29044 --- [ScrumApp] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-09-19T01:02:17.850+02:00  INFO 29044 --- [ScrumApp] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-09-19T01:02:18.226+02:00  INFO 29044 --- [ScrumApp] [main] eAuthenticationProviderManagerConfigurer : Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
+2024-09-19T01:02:18.227+02:00  WARN 29044 --- [ScrumApp] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used for username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider.
+2024-09-19T01:02:18.268+02:00  WARN 29044 --- [ScrumApp] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-09-19T01:02:18.398+02:00 DEBUG 29044 --- [ScrumApp] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 19 mappings in 'requestMappingHandlerMapping'
+2024-09-19T01:02:18.480+02:00 DEBUG 29044 --- [ScrumApp] [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2024-09-19T01:02:18.585+02:00 DEBUG 29044 --- [ScrumApp] [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2024-09-19T01:02:18.613+02:00 DEBUG 29044 --- [ScrumApp] [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2024-09-19T01:02:18.716+02:00  INFO 29044 --- [ScrumApp] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-09-19T01:02:18.724+02:00  INFO 29044 --- [ScrumApp] [main] com.scrumapp.ScrumAppApplication         : Started ScrumAppApplication in 4.422 seconds (process running for 4.811)
+2024-09-19T01:02:24.038+02:00  INFO 29044 --- [ScrumApp] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-09-19T01:02:24.038+02:00  INFO 29044 --- [ScrumApp] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-09-19T01:02:24.038+02:00 DEBUG 29044 --- [ScrumApp] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected StandardServletMultipartResolver
+2024-09-19T01:02:24.039+02:00 DEBUG 29044 --- [ScrumApp] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected AcceptHeaderLocaleResolver
+2024-09-19T01:02:24.039+02:00 DEBUG 29044 --- [ScrumApp] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected FixedThemeResolver
+2024-09-19T01:02:24.040+02:00 DEBUG 29044 --- [ScrumApp] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@2e243122
+2024-09-19T01:02:24.040+02:00 DEBUG 29044 --- [ScrumApp] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.support.SessionFlashMapManager@7af2ee23
+2024-09-19T01:02:24.040+02:00 DEBUG 29044 --- [ScrumApp] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2024-09-19T01:02:24.040+02:00  INFO 29044 --- [ScrumApp] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2024-09-19T01:04:09.276+02:00 DEBUG 29044 --- [ScrumApp] [http-nio-8080-exec-10] o.s.web.servlet.DispatcherServlet        : POST "/api/auth/login", parameters={}
+2024-09-19T01:04:09.277+02:00 DEBUG 29044 --- [ScrumApp] [http-nio-8080-exec-10] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.scrumapp.controller.AuthController#login(LoginRequest)
+2024-09-19T01:04:09.323+02:00 DEBUG 29044 --- [ScrumApp] [http-nio-8080-exec-10] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [com.scrumapp.dto.response.LoginRequest@33ebba5f]
+2024-09-19T01:04:09.496+02:00 DEBUG 29044 --- [ScrumApp] [http-nio-8080-exec-10] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2024-09-19T01:04:09.496+02:00 DEBUG 29044 --- [ScrumApp] [http-nio-8080-exec-10] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [com.scrumapp.dto.request.AuthResponse@e1425b1]
+2024-09-19T01:04:09.505+02:00 DEBUG 29044 --- [ScrumApp] [http-nio-8080-exec-10] o.s.web.servlet.DispatcherServlet        : Completed 200 OK

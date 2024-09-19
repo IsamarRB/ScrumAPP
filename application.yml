@@ -1,0 +1,7 @@
+logging:
+  level:
+    root: INFO
+    org.springframework.web: DEBUG
+  file:
+    name: wrongdoings.log
+    path: /var/logs/myapp
