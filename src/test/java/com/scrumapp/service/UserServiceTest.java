@@ -1,9 +1,6 @@
 package com.scrumapp.service;
 
-import com.scrumapp.model.Project;
-import com.scrumapp.model.Task;
 import com.scrumapp.model.User;
-import com.scrumapp.repository.IProjectRepository;
 import com.scrumapp.repository.UserRepository;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
