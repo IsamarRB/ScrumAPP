@@ -37,13 +37,13 @@ public class UserController {
 
     }
 
-    @PutMapping(path = "/{id}")
+    @PutMapping(path = "/update/{id}")
     public void  updateUser(@RequestBody User user, @PathVariable int id){
         userService.updateUser(user, id);
 
     }
 
-    @DeleteMapping(path = "/{id}")
+    @DeleteMapping(path = "/delete/{id}")
     public String deleteDonationById(@PathVariable int id) {
         boolean ok = userService.deleteUser(id);
 
