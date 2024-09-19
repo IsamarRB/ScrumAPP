@@ -1,6 +1,5 @@
 package com.scrumapp.config;
 
-import com.scrumapp.jwt.AuthTokenFilter;
 import com.scrumapp.repository.UserRepository;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
