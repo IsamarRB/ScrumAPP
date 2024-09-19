@@ -65,7 +65,7 @@ public class TaskControllerTest {
 
         when(taskService.getAllTasks()).thenReturn(taskList);
 
-        mockMvc.perform(get("/api/task"))
+        mockMvc.perform(get("/api/task/"))
                 .andExpect(status().isOk())
                 .andExpect(content().contentType("application/json"))
                 .andExpect(jsonPath("$").isArray())

@@ -15,12 +15,14 @@ import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 import static org.mockito.ArgumentMatchers.any;
+import static org.mockito.ArgumentMatchers.anyInt;
+import static org.mockito.Mockito.doNothing;
 import static org.mockito.Mockito.when;
-import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
-import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
-import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 
 class UserControllerTest {
 
@@ -90,19 +92,46 @@ class UserControllerTest {
     }
 
     @Test
-    void getAllUsersTest() {
+    void getAllUsersTest() throws Exception{
+        when(userService.getAllUser()).thenReturn(userList);
 
+        mockMvc.perform(get("/api/user/"))
+                .andExpect(status().isOk())
+                .andExpect(content().contentType("application/json"))
+                .andExpect(jsonPath("$").isArray())
+                .andExpect(jsonPath("$.length()").value(3));
     }
 
     @Test
-    void getDonationIdTest() {
+    void getUSerByIdTest() throws Exception{
+        when(userService.getUserById(1)).thenReturn(Optional.of(user1));
+
+        mockMvc.perform(get("/api/user/1")
+                        .contentType(MediaType.APPLICATION_JSON))
+                .andExpect(status().isOk())
+                .andExpect(jsonPath("$.id").value(1));
     }
 
     @Test
-    void updateUserTest() {
+    void updateUserTest() throws Exception{
+        doNothing().when(userService).updateUser(any(User.class), anyInt());
+
+        ObjectMapper objectMapper = new ObjectMapper();
+        String userJson = objectMapper.writeValueAsString(user2);
+
+        mockMvc.perform(put("/api/user/update/2")
+                        .contentType(MediaType.APPLICATION_JSON)
+                        .content(userJson))
+                .andExpect(status().isOk());
     }
 
     @Test
-    void deleteDonationByIdTest() {
+    void deleteUserByIdTest() throws Exception{
+        when(userService.deleteUser(1)).thenReturn(true);
+
+        mockMvc.perform(delete("/api/user/delete/1")
+                        .contentType(MediaType.APPLICATION_JSON))
+                .andExpect(status().isOk())
+                .andExpect(jsonPath("$").value("User with id 1 was deleted"));
     }
 }

@@ -53,7 +53,7 @@ public class ProjectControllerTest {
         ObjectMapper objectMapper = new ObjectMapper();
         String projectJson = objectMapper.writeValueAsString(project1);
 
-        mockMvc.perform(post("/api/project")
+        mockMvc.perform(post("/api/project/create")
                 .contentType(MediaType.APPLICATION_JSON)
                 .content(projectJson))
                 .andExpect(status().isOk())
@@ -83,7 +83,7 @@ public class ProjectControllerTest {
         ObjectMapper objectMapper = new ObjectMapper();
         String projectJson = objectMapper.writeValueAsString(updateProject);
 
-        mockMvc.perform(put("/api/project/2")
+        mockMvc.perform(put("/api/project/update/2")
                         .contentType(MediaType.APPLICATION_JSON)
                         .content(projectJson))
                 .andExpect(status().isOk())
@@ -97,7 +97,7 @@ public class ProjectControllerTest {
     void DeleteProjectById() throws Exception{
         when(projectService.deleteProjectById(1)).thenReturn(true);
 
-        mockMvc.perform(delete("/api/project/1")
+        mockMvc.perform(delete("/api/project/delete/1")
                         .contentType(MediaType.APPLICATION_JSON))
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$").value("Project with id 1 was deleted"));
